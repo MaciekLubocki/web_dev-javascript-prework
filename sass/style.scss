@@ -1,0 +1,42 @@
+/*variables*/
+
+$color-main: #000;
+
+/*general*/
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
+    background-image: url(https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*general*/
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-main;
+    padding: 1rem;
+    background-color: #fff;
+}
+
+#messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-main;
+    padding: 1rem;
+    background-color: #fff;
+}
