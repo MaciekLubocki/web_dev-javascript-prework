@@ -1,5 +1,13 @@
 /*variables*/
 /*general*/
+.a13 {
+  border: 2px solid yellow;
+}
+
+.a14 {
+  border: 2px solid #00eeff;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -25,22 +33,60 @@ body {
   position: relative;
 }
 
-/*splash*/
+/*game*/
+.box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+}
+
 #messages {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: space-evenly;
+      justify-content: space-evenly;
   color: #000;
   padding: 1rem;
-  font-family: "Pacifico", cursive;
+  font-family: "Cabin Sketch", cursive;
   font-size: 20px;
   background-color: #fff;
   width: 300px;
   height: 100px;
   border-radius: 25px;
   box-shadow: 5px 5px 10px #000;
+}
+
+#buttons div {
+  margin: 1rem 1rem;
+}
+
+.x {
+  background-color: #2a312a;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
+  transition: 1ms linear all;
+}
+
+.x:hover {
+  background-color: #3d507a;
+}
+
+.x:active {
+  background-color: whitesmoke;
+  color: #02ff41;
 }
 /*# sourceMappingURL=style.css.map */

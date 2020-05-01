@@ -2,17 +2,19 @@
 
 $color-dark: #000;
 $color-ligh: #fff;
-$font-main: 'Pacifico',
+$font-main: 'Cabin Sketch',
 cursive;
 
 /*general*/
 
-// .a13 {
-//     border: 2px solid yellow;
-// }
-// .a14 {
-//     border: 2px solid rgb(0, 238, 255);
-// }
+.a13 {
+    border: 2px solid yellow;
+}
+
+.a14 {
+    border: 2px solid rgb(0, 238, 255);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -36,12 +38,20 @@ body {
 }
 
 
-/*splash*/
+/*game*/
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column-reverse;
+    ;
+}
 
 #messages {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     color: $color-dark;
     padding: 1rem;
     // background-color: $color-ligh;
@@ -52,4 +62,31 @@ body {
     height: 100px;
     border-radius: 25px;
     box-shadow: 5px 5px 10px $color-dark;
+}
+
+#buttons div {
+    margin: 1rem 1rem;
+}
+
+.x {
+    background-color: rgb(42, 49, 42);
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    transition: 1ms linear all;
+}
+
+.x:hover {
+    background-color: rgb(61, 80, 122);
+}
+
+.x:active {
+    background-color: rgb(245, 245, 245);
+    color: rgb(2, 255, 65);
 }
