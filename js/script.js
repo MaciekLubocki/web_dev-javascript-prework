@@ -58,13 +58,11 @@ function playGame(playerInput) {
 }
 
 document.querySelector('.play-stone').addEventListener('click', function() {
-    playGame(3);
+    playGame(1);
 });
 document.querySelector('.play-paper').addEventListener('click', function() {
     playGame(2);
 });
 document.querySelector('.play-scissors').addEventListener('click', function() {
-    playGame(1);
+    playGame(3);
 });
-
-// playGame(3);
