@@ -79,10 +79,12 @@ body {
   font-size: 16px;
   border-radius: 50%;
   transition: 1ms linear all;
+  box-shadow: 5px 5px 10px #000;
 }
 
 .x:hover {
   background-color: #3d507a;
+  box-shadow: 5px 5px 15px #000;
 }
 
 .x:active {

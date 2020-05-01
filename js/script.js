@@ -1,3 +1,5 @@
+printMessage('Paper-Stone-Scissors is simple but yet funny game to play. Win with the MakuBot');
+
 function playGame(playerInput) {
 
     clearMessages()

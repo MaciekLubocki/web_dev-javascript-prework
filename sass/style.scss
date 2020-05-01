@@ -54,7 +54,6 @@ body {
     justify-content: space-evenly;
     color: $color-dark;
     padding: 1rem;
-    // background-color: $color-ligh;
     font-family: $font-main;
     font-size: 20px;
     background-color: $color-ligh;
@@ -80,10 +79,12 @@ body {
     font-size: 16px;
     border-radius: 50%;
     transition: 1ms linear all;
+    box-shadow: 5px 5px 10px $color-dark;
 }
 
 .x:hover {
     background-color: rgb(61, 80, 122);
+    box-shadow: 5px 5px 15px $color-dark;
 }
 
 .x:active {
