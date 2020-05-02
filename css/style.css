@@ -1,5 +1,7 @@
 /*variables*/
 /*general*/
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
 .a13 {
   border: 2px solid yellow;
 }
@@ -129,6 +131,10 @@ body {
   animation: fadeInUp 1s linear;
 }
 
+.anim {
+  animation: fadeInUp 1s linear;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -155,7 +161,36 @@ body {
   visibility: hidden;
 }
 
-/* toggle button */
+.boxi {
+  background-color: #218D9B;
+  height: 100px;
+  width: 100px;
+}
+
+.transform {
+  transition: all 2s ease;
+}
+
+.transform-active {
+  background-color: #45CEE0;
+  height: 200px;
+  width: 200px;
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Audiowide"), local("Audiowide-Regular"), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+
+body {
+  font-size: 62.5%;
+  background-color: #fff;
+  margin: 10px;
+  border: 1px solid #333;
+}
+
 *,
 *::before,
 *::after {
@@ -574,8 +609,7 @@ h1 + .headingOuter {
 }
 
 /* =====================================================
-   
-- switch stylee
+   Toggle - switch stylee
    ===================================================== */
 .toggle--switch .toggle--btn {
   position: relative;
@@ -587,7 +621,6 @@ h1 + .headingOuter {
   background: linear-gradient(90deg, #a4bf4d 0%, #a4bf4d 50%, #ca5046 50%, #ca5046 200%);
   background-position: -80px 0;
   background-size: 200% 100%;
-  box-shadow: inset 0 0px 22px -8px #111;
 }
 
 .toggle--switch .toggle--btn, .toggle--switch .toggle--btn:before {

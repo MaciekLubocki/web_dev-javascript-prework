@@ -177,13 +177,69 @@ body {
     width: 200px;
 }
 
+// Define the fonts used in the Pen
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@font-face {
+    font-family: 'Audiowide';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Audiowide'), local('Audiowide-Regular'), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
 
-/* toggle button */
+$color-bg: #fff; //background for the demo
+body {
+    font-size: 62.5%;
+    background-color: $color-bg;
+    margin: 10px;
+    border: 1px solid #333;
+}
 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.4em;
+    background-color: rgba(41, 41, 41, 1);
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    color: #fff;
+    a {
+        display: block;
+        margin-top: 10px;
+        text-transform: none;
+        color: #aaa;
+        font-size: 16px;
+        text-decoration: none;
+    }
+}
+
+.headingOuter {
+    background: #f1f1f1;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding: 10px;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    font-size: 1.6em;
+    &:first-child {
+        margin-top: 0;
+    }
+    h1+& {
+        margin-top: 0;
+    }
 }
 
 
@@ -224,6 +280,151 @@ body {
     &:after {
         content: '';
         display: block;
+    }
+}
+
+
+/* ===================================================
+   Day/Night and Gender toggle buttons
+   =================================================== */
+
+$toggleHeight: 70px;
+$toggleWidth: 125px;
+$borderWidth: 5px;
+$toggleBtnRadius: $toggleHeight - 14px;
+$bgColor--night: #3c4145;
+$borderColor--night: #1c1c1c;
+$toggleBtn-bgColor--night: #fff;
+$toggleBtn-borderColor--night: #e3e3c7;
+$bgColor--day: #9ee3fb;
+$borderColor--day: #86c3d7;
+$toggleBtn-bgColor--day: #ffdf6d;
+$toggleBtn-borderColor--day: #e1c348;
+$cloud-borderColor: #d3d3d3;
+$cloud-bgColor: #fff;
+.toggle--daynight,
+.toggle--like {
+    .toggle--btn {
+        position: relative;
+        height: $toggleHeight;
+        width: $toggleWidth;
+        border-radius: $toggleHeight;
+        //toggle button
+        &:before {
+            position: absolute;
+            top: 2px;
+            left: 4px;
+            width: $toggleBtnRadius;
+            height: $toggleBtnRadius;
+            border-radius: 50%;
+        }
+    }
+}
+
+.toggle--daynight {
+    .toggle--btn {
+        border: $borderWidth solid $borderColor--night;
+        background-color: $bgColor--night;
+        //toggle button
+        &:before {
+            background-color: $toggleBtn-bgColor--night;
+            border: $borderWidth solid $toggleBtn-borderColor--night;
+        }
+        &:after {
+            position: absolute;
+            top: 62%;
+            left: $toggleWidth - ($toggleBtnRadius) - ($borderWidth * 2) - 20px;
+            z-index: 10;
+            width: $toggleBtnRadius / 5;
+            height: $toggleBtnRadius / 5;
+            opacity: 0;
+            background-color: $cloud-bgColor;
+            border-radius: 50%;
+            //crazy ass box-shadow to make the cloud
+            box-shadow: $cloud-bgColor 0 0, $cloud-bgColor 3px 0, $cloud-bgColor 6px 0, $cloud-bgColor 9px 0, $cloud-bgColor 11px 0, $cloud-bgColor 14px 0, $cloud-bgColor 16px 0, $cloud-bgColor 21px -1px 0 1px, $cloud-bgColor 16px -7px 0 -2px, $cloud-bgColor 7px -7px 0 1px, $cloud-borderColor 0 0 0 4px, $cloud-borderColor 6px 0 0 4px, $cloud-borderColor 11px 0 0 4px, $cloud-borderColor 16px 0 0 4px, $cloud-borderColor 21px -1px 0 5px, $cloud-borderColor 16px -7px 0 1px, $cloud-borderColor 7px -7px 0 5px;
+            transition: opacity 100ms ease-in;
+        }
+    }
+    @keyframes starry_star {
+        50% {
+            background-color: rgba(255, 255, 255, 0.1);
+            box-shadow: #fff 30px -3px 0 0, #fff 12px 10px 0 -1px, rgba(255, 255, 255, 0.1) 38px 18px 0 1px, #fff 32px 34px 0 0, rgba(255, 255, 255, 0.1) 20px 24px 0 -1.5px, #fff 5px 38px 0 1px;
+        }
+    }
+    @keyframes bounceIn {
+        0% {
+            opacity: 0;
+            transform: scale(.3);
+        }
+        50% {
+            opacity: 100;
+            transform: scale(1.1);
+        }
+        55% {
+            transform: scale(1.1);
+        }
+        75% {
+            transform: scale(.9);
+        }
+        100% {
+            opacity: 100;
+            transform: scale(1);
+        }
+    }
+    //stars
+    .toggle--feature {
+        display: block;
+        position: absolute;
+        top: 9px;
+        left: 52.5%;
+        z-index: 20;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 0, rgba(255, 255, 255, 0.1) 12px 10px 0 -1px, #fff 38px 18px 0 1px, rgba(255, 255, 255, 0.1) 32px 34px 0 0, #fff 20px 24px 0 -1.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 1px;
+        animation: starry_star 5s ease-in-out infinite;
+        &:before {
+            position: absolute;
+            top: -2px;
+            left: -25px;
+            width: 18px;
+            height: 18px;
+            background-color: $toggleBtn-bgColor--night;
+            border-radius: 50%;
+            border: 5px solid $toggleBtn-borderColor--night;
+            box-shadow: $toggleBtn-borderColor--night -28px 0 0 -3px, $toggleBtn-borderColor--night -8px 24px 0 -2px;
+            transform-origin: -6px 130%;
+        }
+    }
+    //what happens once checkbox is checked
+    .toggle--checkbox:checked {
+        &+.toggle--btn {
+            background-color: $bgColor--day;
+            border: $borderWidth solid $borderColor--day;
+            &:before {
+                left: $toggleWidth - ($toggleBtnRadius) - ($borderWidth * 2) - 4px;
+                background-color: $toggleBtn-bgColor--day;
+                border: $borderWidth solid $toggleBtn-borderColor--day;
+            }
+            &:after {
+                opacity: 100;
+                animation-name: bounceIn;
+                animation-duration: 0.60s;
+                animation-delay: 0.10s;
+                animation-fill-mode: backwards;
+                animation-timing-function: ease-in-out;
+            }
+            >.toggle--feature {
+                opacity: 0;
+                box-shadow: rgba(255, 255, 255, 0.1) 30px -3px 0 -4px, rgba(255, 255, 255, 0.1) 12px 10px 0 -5px, #fff 38px 18px 0 -3px, rgba(255, 255, 255, 0.1) 32px 34px 0 -4px, #fff 20px 24px 0 -5.5px, rgba(255, 255, 255, 0.1) 5px 38px 0 -3px;
+                animation: none;
+                &:before {
+                    left: 25px;
+                    transform: rotate(70deg);
+                }
+            }
+        }
     }
 }
 
@@ -301,6 +502,63 @@ $toggleFeaturePosition--happy: 53px;
                     top: 21px;
                     border-radius: 50%/50%;
                 }
+            }
+        }
+    }
+}
+
+
+/* ====================================================
+   Text toggle button
+   ==================================================== */
+
+$toggleHeight: 70px;
+$toggleWidth: 180px;
+$toggle-borderColor: #8c8c8c;
+$toggle-shadowColor: #999;
+$activeTextColor: #db4c00;
+$inactiveTextColor: #999;
+.toggle--text {
+    .toggle--btn {
+        position: relative;
+        width: $toggleWidth;
+        height: $toggleHeight;
+        font-family: 'PT Sans', Sans Serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 40px;
+        border: 1px solid $toggle-borderColor;
+        border-right: 2px solid $toggle-borderColor;
+        box-shadow: inset ($toggleWidth/2) 0 10px rgba(255, 255, 255, 0.6), inset -3px 3px 18px -2px $toggle-borderColor, 0 0 15px #ccc, 0px -5px 16px 1px #ddd, -5px -5px 16px 1px #ddd, 5px -5px 16px 1px #ddd, -5px -5px 16px 1px #ddd, 5px -5px 16px 1px #ddd, 17px 9px 0 -5px rgba(255, 255, 255, 0.6), -3px 6px 12px -7px #000, //outlines
+        0 0 0 14px #fff, 0 0 0 15px $toggle-shadowColor;
+        &:before,
+        &:after {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:before {
+            content: attr(data-label-on);
+            left: 15%;
+            color: $inactiveTextColor;
+        }
+        &:after {
+            content: attr(data-label-off);
+            right: 15%;
+            color: $activeTextColor;
+        }
+    }
+    .toggle--checkbox:checked {
+        &+.toggle--btn {
+            border-left: 2px solid $toggle-borderColor;
+            border-right: 1px solid $toggle-borderColor;
+            box-shadow: inset ($toggleWidth/2) 0 10px rgba(255, 255, 255, 0), inset 3px 3px 18px -2px $toggle-borderColor, 0 0 15px #ccc, 0px -5px 16px 1px #ddd, -5px -5px 16px 1px #ddd, 5px -5px 16px 1px #ddd, -5px -5px 16px 1px #ddd, 5px -5px 16px 1px #ddd, -17px 9px 0 -5px rgba(255, 255, 255, 0.6), 3px 6px 12px -7px #000, //outlines
+            0 0 0 14px #fff, 0 0 0 15px $toggle-shadowColor;
+            &:before {
+                color: $activeTextColor;
+            }
+            &:after {
+                color: $inactiveTextColor;
             }
         }
     }
@@ -388,8 +646,7 @@ $toggle-textColor: #fff;
 
 
 /* =====================================================
-   
-- switch stylee
+   Toggle - switch stylee
    ===================================================== */
 
 $toggleHeight: 44px;
@@ -411,7 +668,7 @@ $toggle-textColor: #fff;
         background: linear-gradient(90deg, $toggle-bgColor--active 0%, $toggle-bgColor--active 50%, $toggle-bgColor--inactive 50%, $toggle-bgColor--inactive 200%);
         background-position: -80px 0;
         background-size: 200% 100%;
-        box-shadow: inset 0 0px 22px -8px #111;
+        // box-shadow: inset 0 0px 22px -8px #111;
         &,
         &:before {
             border-radius: 4px;
@@ -542,10 +799,12 @@ $toggleInactiveColor: #ccc;
     }
 }
 
+// $toggleBgColor: #111;
 $toggleBtnColor: #dfdfdf;
 $toggleActiveColor: #0094e0;
 $toggleInactiveColor: #aaa;
 .toggle--push--glow {
+    // background: $toggleBgColor;
     padding: 50px 0;
     margin-bottom: -50px;
     & .toggle--btn {
@@ -576,6 +835,66 @@ $toggleInactiveColor: #aaa;
                 }
                 &:after {
                     background-color: $toggleActiveColor;
+                }
+            }
+        }
+    }
+}
+
+
+/* ======================================================
+   Neon toggle
+   ====================================================== */
+
+@keyframes neon {
+    0% {
+        text-shadow: 0 0 10px #fff, 0 0 15px #fff, 0 0 25px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 90px #FF9900, 0 0 90px #FF9900;
+    }
+    100% {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900;
+    }
+}
+
+$textColor--active: #f1f1f1;
+$textColor--inactive: #333;
+.toggle--neon {
+    background-color: #222;
+    margin-top: 0;
+    padding: 50px 0;
+    & .toggle--btn {
+        font-family: Audiowide;
+        text-transform: uppercase;
+        font-size: 6.2em;
+        color: $textColor--inactive;
+        // text-shadow: -1px -1px 1px #111, 1px 1px 1px #444;
+        text-shadow: 0 0 10px transparent, 0 0 15px transparent, 0 0 25px transparent, 0 0 40px transparent, 0 0 70px transparent, 0 0 90px transparent, 0 0 90px transparent;
+        &:before,
+        &:after {
+            display: inline-block;
+            margin: 0 20px;
+            transition: all 220ms ease-in-out;
+        }
+        &:before {
+            content: attr(data-label-off);
+            animation: neon 1.5s ease-in-out infinite alternate;
+            animation-delay: 90ms;
+            color: $textColor--active;
+        }
+        &:after {
+            content: attr(data-label-on);
+        }
+    }
+    & .toggle--checkbox {
+        &:checked {
+            &+.toggle--btn {
+                &:before {
+                    animation: none;
+                    color: $textColor--inactive;
+                }
+                &:after {
+                    animation: neon 1.5s ease-in-out infinite alternate;
+                    animation-delay: 90ms;
+                    color: $textColor--active;
                 }
             }
         }

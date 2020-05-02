@@ -127,20 +127,34 @@ how = whoWon(countComputer, countPlayer)
 
 var buttonClick = document.querySelector("#buttons");
 count = 0;
-buttonClick.onclick = function() {
+buttonClick.addEventListener('click', function() {
+
     count += 1;
     clearResults()
     printResults('MakuBot:' + whoWon(countComputer, countPlayer) + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
-};
+});
+
+
+
+// var buttonClick = document.querySelector("#buttons");
+// count = 0;
+// buttonClick.onclick = function() {
+//     count += 1;
+//     clearResults()
+//     printResults('MakuBot:' + whoWon(countComputer, countPlayer) + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
+// };
+
+
+
+
 
 
 document.querySelector('#panel').addEventListener('click', function() {
-    document.getElementById('results').classList.toggle('none');
-    // document.getElementById('results').classList.add('anim');
-
-    // document.getElementById('results').className = "active";
-
+    alert("Hello WOrld");
+    document.querySelector('#results').classList.toggle('none');
 });
+
+
 
 
 // function showPanel() {
