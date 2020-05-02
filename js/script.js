@@ -28,11 +28,12 @@ function playGame(playerInput) {
     console.log('Gracz wpisał: ' + playerInput);
     let argPlayerMove = getMoveName(playerInput);
 
+    var argStatus = 0;
 
     function displayResult(argComputerMove, argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove);
         if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
-            argStatus = 2
+            argStatus = 2;
             console.log(argStatus)
             return 'Ty wygrywasz!';
         } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
@@ -80,12 +81,17 @@ function playGame(playerInput) {
             argStatus = 0;
             return 'No co tam? Masz do wyboru 1 , 2 lub 3';
         }
+
     }
+    console.log('sprawdzam ARG: ' + argStatus)
 
     result = displayResult(argComputerMove, argPlayerMove)
     printMessage('Zagrałem ' + argComputerMove + ', a Ty zagrałeś ' + argPlayerMove + '. ' + result);
 
 }
+
+
+
 
 document.querySelector('.play-stone').addEventListener('click', function() {
     playGame(1);
@@ -101,10 +107,11 @@ document.querySelector('.play-scissors').addEventListener('click', function() {
 
 /* Results Module */
 
+countComputer = 0;
+countPlayer = 0;
 
 function whoWon(countComputer, countPlayer) {
-    countComputer = 0;
-    countPlayer = 0;
+    clearResults()
     if (argStatus == 1) {
         countComputer += 1;
         return countComputer;
@@ -116,18 +123,23 @@ function whoWon(countComputer, countPlayer) {
     }
 }
 
+how = whoWon(countComputer, countPlayer)
+
 var buttonClick = document.querySelector("#buttons");
 count = 0;
 buttonClick.onclick = function() {
     count += 1;
     clearResults()
-    printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
+    printResults('MakuBot:' + whoWon(countComputer, countPlayer) + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
 };
-
 
 
 document.querySelector('#panel').addEventListener('click', function() {
     document.getElementById('results').classList.toggle('none');
+    // document.getElementById('results').classList.add('anim');
+
+    // document.getElementById('results').className = "active";
+
 });
 
 
