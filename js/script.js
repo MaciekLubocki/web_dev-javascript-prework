@@ -125,17 +125,16 @@ document.querySelector('#toggle--push--glow').addEventListener('click', function
 
     document.querySelector('.box').classList.toggle('none');
     document.querySelector('.box').classList.toggle('anim');
-
+    document.querySelector('.beep').classList.toggle('anim_beep');
+    document.querySelector('.beep').classList.toggle('none');
 });
 
 
 
 
-document.querySelector('#panel').addEventListener('click', function() {
-    // alert('TEST1');
-    // document.querySelector('.box').classList.remove('none');
-
-    document.querySelector('#results').classList.toggle('none');
+document.querySelector('.statistics').addEventListener('click', function() {
+    document.querySelector('.result').classList.toggle('none');
+    document.querySelector('.result').classList.toggle('anim');
     document.querySelector('#panel').classList.toggle('none');
 
 });

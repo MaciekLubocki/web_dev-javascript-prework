@@ -187,8 +187,32 @@ body {
     animation: fadeInUp 1s linear;
 }
 
+.beep {
+    position: absolute;
+    top: -50px;
+    left: 730px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: rgb(255, 0, 0);
+    box-shadow: 0px 0px 20px rgb(255, 253, 253);
+}
+
 .anim {
     animation: fadeInUp 1s linear;
+}
+
+.anim_beep {
+    animation: shadow-pulse 1s infinite;
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 0 0px rgba(248, 3, 3, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 10px 10px rgba(250, 6, 6, 1);
+    }
 }
 
 @keyframes fadeInUp {
@@ -214,8 +238,7 @@ body {
 }
 
 .none {
-    visibility: hidden;
-    animation: fadeInUp 1s linear;
+    opacity: 0;
 }
 
 .boxi {
