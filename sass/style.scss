@@ -2,9 +2,9 @@
 
 $color-dark: #000;
 $color-ligh: #fff;
-$font-main: 'Cabin Sketch',
-cursive;
-$toggleBgColor: rgba(255, 255, 255, 0);
+$font-main: 'Roboto Mono',
+monospace;
+$toggleBgColor:rgba(0, 0, 0, 0);
 $toggleBtnColor: #dfdfdf;
 $toggleActiveColor: #0094e0;
 $toggleInactiveColor: #aaa;
@@ -268,7 +268,9 @@ body {
 }
 
 
-/* on/off button */
+/* =====================================================
+   Some defaults across all toggle demos
+   ===================================================== */
 
 .toggle {
     display: block;
@@ -292,7 +294,8 @@ body {
 }
 
 .toggle--btn,
-.toggle--checkbox {
+.toggle--checkbox,
+.toggle--feature {
     &,
     &:before,
     &:after {
@@ -305,19 +308,16 @@ body {
     }
 }
 
-.toggle--btn {
-    border: $borderWidth solid $borderColor--sad;
-    background-color: $bgColor--sad;
-    //toggle button
-    &:before {
-        background-color: $emojiBgColor;
-        border: $borderWidth solid $emojiBorderColor;
-    }
-}
 
+/* ======================================================
+   Push button toggle
+   ====================================================== */
 
-/*Push button toggle*/
-
+$toggleBtnRadius: 50px;
+$toggleBtnColor: #f9f8f6;
+$toggleShadowColor: #333;
+$toggleActiveColor: #FF9900;
+$toggleInactiveColor: #ccc;
 .toggle--push {
     & .toggle--btn {
         position: relative;
@@ -336,8 +336,10 @@ body {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            width: $toggleBtnRadius / 2.2;
+            height: $toggleBtnRadius / 2.2;
             border-radius: 50%;
-            background-color: #fff;
+            background-color: $toggleActiveColor;
             box-shadow: inset 0 0 0 5px $toggleInactiveColor, inset 0 0 0 14px $toggleBtnColor;
         }
         &:after {
@@ -347,7 +349,7 @@ body {
             transform: translate(-50%, -50%);
             width: 4px;
             height: 12px;
-            background-color: #fff;
+            background-color: $toggleInactiveColor;
             box-shadow: 0 0 0 2.5px $toggleBtnColor;
         }
         &:hover {
@@ -355,7 +357,7 @@ body {
                 box-shadow: inset 0 0 0 5px darken($toggleInactiveColor, 10%), inset 0 0 0 14px $toggleBtnColor;
             }
             &:after {
-                background-color: #fff;
+                background-color: darken($toggleInactiveColor, 10%);
             }
         }
     }
@@ -367,25 +369,29 @@ body {
                     box-shadow: inset 0 0 0 5px $toggleActiveColor, inset 0 0 0 14px $toggleBtnColor;
                 }
                 &:after {
-                    background-color: #fff;
+                    background-color: $toggleActiveColor;
                 }
             }
         }
     }
 }
 
+// $toggleBgColor: #111;
+$toggleBtnColor: #dfdfdf;
+$toggleActiveColor: #0094e0;
+$toggleInactiveColor: #aaa;
 .toggle--push--glow {
     background: $toggleBgColor;
-    padding: 0 0;
-    margin-bottom: 0px;
+    padding: 50px 0;
+    margin-bottom: -50px;
     & .toggle--btn {
-        background-color: #fff;
+        background-color: $toggleBtnColor;
         box-shadow: 0 5px 10px 0px $toggleShadowColor, 0 0 0 3px lighten($toggleBgColor, 20%), 0 0 8px 2px transparent, 0 0 0 6px lighten($toggleBgColor, 50%);
         &:before {
             box-shadow: inset 0 0 0 5px $toggleInactiveColor, inset 0 0 0 14px $toggleBtnColor;
         }
         &:after {
-            background-color: #fff;
+            background-color: $toggleInactiveColor;
             box-shadow: 0 0 0 2.5px $toggleBtnColor;
         }
         &:hover {
@@ -393,7 +399,7 @@ body {
                 box-shadow: inset 0 0 0 5px darken($toggleInactiveColor, 20%), inset 0 0 0 14px $toggleBtnColor;
             }
             &:after {
-                background-color: #fff;
+                background-color: darken($toggleInactiveColor, 20%);
             }
         }
     }
@@ -405,7 +411,7 @@ body {
                     box-shadow: inset 0 0 0 5px $toggleActiveColor, inset 0 0 0 14px $toggleBtnColor;
                 }
                 &:after {
-                    background-color: #fff;
+                    background-color: $toggleActiveColor;
                 }
             }
         }
@@ -448,3 +454,43 @@ body {
     top: 10%;
     left: 50%;
 }
+
+.line-1 {
+    position: relative;
+    top: 50%;
+    width: 24em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255, 255, 255, .75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+
+/* Animation */
+
+.anim-typewriter {
+    animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 24em;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: rgba(255, 255, 255, .75);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+Resources

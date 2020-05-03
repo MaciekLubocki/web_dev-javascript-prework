@@ -14,14 +14,14 @@ function playGame(playerInput) {
 
     function getMoveName(argMoveId) {
         if (argMoveId == 1) {
-            return 'kamień';
+            return 'stone';
         } else if (argMoveId == '2') {
-            return 'papier';
+            return 'paper';
         } else if (argMoveId == '3') {
-            return 'nożyce';
+            return 'scissors';
         } else {
-            console.log('Nie znam ruchu o id ' + argMoveId + '.');
-            return 'nieznany ruch';
+            console.log('I dont know the move with id ' + argMoveId + '.');
+            return 'none';
         }
     }
 
@@ -29,7 +29,7 @@ function playGame(playerInput) {
     var argComputerMove = getMoveName(randomNumber);
     console.log('Wylosowana liczba to: ' + randomNumber);
 
-    // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
+    // let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: paper, 3: nożyce.');
     console.log('Gracz wpisał: ' + playerInput);
     var argPlayerMove = getMoveName(playerInput);
 
@@ -37,48 +37,42 @@ function playGame(playerInput) {
 
     function displayResult(argComputerMove, argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove);
-        if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+        if (argComputerMove == 'stone' && argPlayerMove == 'paper') {
             countPlayer++;
-            return 'Ty wygrywasz!';
-        } else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
-
-            return 'No to mamy remis';
-        } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+            return 'You WON!';
+        } else if (argComputerMove == 'stone' && argPlayerMove == 'stone') {
+            return '...anyway, we have a draw';
+        } else if (argComputerMove == 'stone' && argPlayerMove == 'scissors') {
             countComputer++;
-            return 'Yupi joł wygrałem, a Ty przegrałeś.';
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') {
+            return 'Yuupi yo MakuBot won, & you got lost.';
+        } else if (argComputerMove == 'scissors' && argPlayerMove == 'stone') {
+            countPlayer++;
+            return 'YOU WON';
+        } else if (argComputerMove == 'scissors' && argPlayerMove == 'scissors') {
+            return 'A draw. Lets play again!';
+        } else if (argComputerMove == 'scissors' && argPlayerMove == 'paper') {
             countComputer++;
-            return 'W.Y.G.R.A.Ł.E.Ś';
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
-
-            return 'Remis. Zagrajmy jeszcze raz!.';
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
-            countComputer++;
-            return 'O kto tutaj jest mistrzem? Wygrałem. Szach mat!';
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+            return 'And who is Mr Master here? I won. Checkmate!';
+        } else if (argComputerMove == 'paper' && argPlayerMove == 'stone') {
             countComputer++;
             return 'Ha! I am the Champion.';
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
+        } else if (argComputerMove == 'paper' && argPlayerMove == 'scissors') {
             countPlayer++;
-            return 'Buuu to niesprawiedliwe. Ja chce wygrać!';
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
-
-            return 'Heh kto ten program stworzył. Znowu remis?';
-        } else if (argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch') {
-
-            return 'Wpisz Synu poprawną wartość.';
-        } else if (argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch') {
-
-            return 'Coś Ci ręcę drżą. Wpisz poprawną wartość';
-        } else if (argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch') {
-
-            return 'No co tam? Masz do wyboru 1 , 2 lub 3';
+            return 'Buuu thats unfair. Me wanna win!';
+        } else if (argComputerMove == 'paper' && argPlayerMove == 'paper') {
+            return 'Heh tell me please who wrote such a dumb programm. We have a draw again.';
+        } else if (argComputerMove == 'paper' && argPlayerMove == 'nieznany ruch') {
+            return 'Write me Son corect number';
+        } else if (argComputerMove == 'scissors' && argPlayerMove == 'nieznany ruch') {
+            return 'Do you have any problem with your hands shaking?. Write apropriate number';
+        } else if (argComputerMove == 'stone' && argPlayerMove == 'nieznany ruch') {
+            return 'Knock knock, you can may chose 1, 2 or 3 Sir.';
         }
 
     }
 
     result = displayResult(argComputerMove, argPlayerMove);
-    printMessage('Zagrałem ' + argComputerMove + ', a Ty zagrałeś ' + argPlayerMove + '. ' + result);
+    printMessage('I have chosen ' + argComputerMove + ', and you got ' + argPlayerMove + '. ' + result);
 
 }
 
