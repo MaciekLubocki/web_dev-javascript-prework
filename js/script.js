@@ -6,7 +6,7 @@ var countPlayer = 0;
 
 
 printMessage('Paper-Stone-Scissors is simple but yet funny game to play. Win with the MakuBot');
-// printResult('Baku Baku');
+printResults('ここに統計があります。ゲームを始めましょう。');
 
 function playGame(playerInput) {
 
@@ -106,6 +106,7 @@ var buttonClick = document.querySelector("#buttons");
 var count = 0;
 buttonClick.addEventListener('click', function() {
     count += 1;
+
     clearResults();
     printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
 });
@@ -123,8 +124,14 @@ document.querySelector('#toggle--push--glow').addEventListener('click', function
     // alert('TEST1');
     // document.querySelector('.box').classList.remove('none');
 
+
     document.querySelector('.box').classList.toggle('none');
-    document.querySelector('.box').classList.toggle('anim');
+    document.querySelector('.box').classList.add('anim');
+    document.querySelector('.box').classList.toggle('anim_out');
+
+
+    // document.querySelector('.box').classList.toggle('none');
+    // document.querySelector('.box').classList.toggle('anim');
     document.querySelector('.beep').classList.toggle('anim_beep');
     document.querySelector('.beep').classList.toggle('none');
 });
@@ -143,7 +150,7 @@ document.querySelector('.statistics').addEventListener('click', function() {
 document.querySelector('#results').addEventListener('click', function() {
     // alert('TEST1');
     document.querySelector('#results').classList.toggle('none');
-
+    document.querySelector('#results').classList.toggle('anim');
     document.querySelector('#panel').classList.toggle('none');
 
 });

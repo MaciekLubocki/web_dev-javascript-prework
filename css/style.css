@@ -1,18 +1,6 @@
 /*variables*/
 /*outside circle*/
 /*general*/
-.a13 {
-  border: 2px solid yellow;
-}
-
-.a14 {
-  border: 2px solid #011414;
-}
-
-.a15 {
-  border: 2px solid #fa0101;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -155,15 +143,21 @@ body {
   padding: 1rem;
   font-family: "Cabin Sketch", cursive;
   font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   width: 300px;
   height: 100px;
   color: #fff;
-  animation: fadeInUp 1s linear;
+  padding-bottom: 5rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 }
 
 .anim {
   animation: fadeInUp 1s linear;
+}
+
+.anim_out {
+  animation: fadeInOut 1s linear;
 }
 
 .anim_beep {
@@ -187,6 +181,17 @@ body {
   to {
     opacity: 1;
     transform: translate3d(100, 0, 0);
+  }
+}
+
+@keyframes fadeInOut {
+  from {
+    opacity: 1;
+    transform: translate3d(100, 0, 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
   }
 }
 
