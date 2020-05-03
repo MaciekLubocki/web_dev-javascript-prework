@@ -35,15 +35,18 @@ $toggleActiveColor: #0094e0;
 
 /*general*/
 
-// .a13 {
-//     border: 2px solid yellow;
-// }
-// .a14 {
-//     border: 2px solid rgb(0, 238, 255);
-// }
-// .a15 {
-//     border: 2px solid rgb(250, 1, 1);
-// }
+.a13 {
+    border: 2px solid yellow;
+}
+
+.a14 {
+    border: 2px solid rgb(1, 20, 20);
+}
+
+.a15 {
+    border: 2px solid rgb(250, 1, 1);
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -185,16 +188,6 @@ body {
     height: 100px;
     color: $color-ligh;
     animation: fadeInUp 1s linear;
-}
-
-.beep {
-    position: absolute;
-    top: 135px;
-    left: 512px;
-    width: 5px;
-    height: 5px;
-    border-radius: 100%;
-    background: rgb(255, 0, 0);
 }
 
 .anim {
@@ -412,9 +405,32 @@ body {
     position: relative;
 }
 
-.robo-nose div {
+.robo-nose .toggle {
     position: absolute;
     top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+// .robo-nose .beep_platform {
+//     position: absolute;
+//     top: 20%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     width: 5px;
+//     height: 5px;
+//     border-radius: 100%;
+//     background: rgb(255, 0, 0);
+//     // position: absolute;
+//     // top: 10%;
+//     // left: 48%;
+// }
+.robo-nose .beep {
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: rgb(255, 0, 0);
+    position: absolute;
+    top: 10%;
+    left: 50%;
 }

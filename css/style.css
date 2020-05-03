@@ -1,6 +1,18 @@
 /*variables*/
 /*outside circle*/
 /*general*/
+.a13 {
+  border: 2px solid yellow;
+}
+
+.a14 {
+  border: 2px solid #011414;
+}
+
+.a15 {
+  border: 2px solid #fa0101;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -148,16 +160,6 @@ body {
   height: 100px;
   color: #fff;
   animation: fadeInUp 1s linear;
-}
-
-.beep {
-  position: absolute;
-  top: 135px;
-  left: 512px;
-  width: 5px;
-  height: 5px;
-  border-radius: 100%;
-  background: red;
 }
 
 .anim {
@@ -371,10 +373,20 @@ body {
   position: relative;
 }
 
-.robo-nose div {
+.robo-nose .toggle {
   position: absolute;
   top: 44%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.robo-nose .beep {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: red;
+  position: absolute;
+  top: 10%;
+  left: 50%;
 }
 /*# sourceMappingURL=style.css.map */
