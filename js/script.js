@@ -6,7 +6,7 @@ var countPlayer = 0;
 
 
 printMessage('Paper-Stone-Scissors is simple but yet funny game to play. Win with the MakuBot');
-printResult('Baku Baku');
+// printResult('Baku Baku');
 
 function playGame(playerInput) {
 
