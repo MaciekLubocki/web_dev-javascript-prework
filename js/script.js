@@ -128,10 +128,6 @@ document.querySelector('#toggle--push--glow').addEventListener('click', function
     document.querySelector('.box').classList.toggle('none');
     document.querySelector('.box').classList.add('anim');
     document.querySelector('.box').classList.toggle('anim_out');
-
-
-    // document.querySelector('.box').classList.toggle('none');
-    // document.querySelector('.box').classList.toggle('anim');
     document.querySelector('.beep').classList.toggle('anim_beep');
     document.querySelector('.beep').classList.toggle('none');
 });
@@ -142,7 +138,11 @@ document.querySelector('#toggle--push--glow').addEventListener('click', function
 document.querySelector('.statistics').addEventListener('click', function() {
     document.querySelector('.result').classList.toggle('none');
     document.querySelector('.result').classList.toggle('anim');
+    document.querySelector('#panel').classList.toggle('anim_out');
     document.querySelector('#panel').classList.toggle('none');
+
+
+
 
 });
 
@@ -151,6 +151,7 @@ document.querySelector('#results').addEventListener('click', function() {
     // alert('TEST1');
     document.querySelector('#results').classList.toggle('none');
     document.querySelector('#results').classList.toggle('anim');
+    document.querySelector('#panel').classList.toggle('anim_out');
     document.querySelector('#panel').classList.toggle('none');
 
 });
