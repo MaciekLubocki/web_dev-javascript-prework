@@ -1,18 +1,6 @@
 /*variables*/
 /*outside circle*/
 /*general*/
-.a13 {
-  border: 2px solid yellow;
-}
-
-.a14 {
-  border: 2px solid #00eeff;
-}
-
-.a15 {
-  border: 2px solid #fa0101;
-}
-
 body {
   padding: 0;
   margin: 0;
@@ -173,7 +161,7 @@ body {
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(100, 0, 0);
   }
 }
 

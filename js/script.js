@@ -124,6 +124,7 @@ document.querySelector('#toggle--push--glow').addEventListener('click', function
     // document.querySelector('.box').classList.remove('none');
 
     document.querySelector('.box').classList.toggle('none');
+    document.querySelector('.box').classList.toggle('anim');
 
 });
 
