@@ -1,370 +1,390 @@
 /*variables*/
+
+
 /*outside circle*/
+
+
 /*general*/
+
 .a13 {
-  border: 2px solid yellow;
+    border: 2px solid yellow;
 }
 
 .a14 {
-  border: 2px solid #00eeff;
+    border: 2px solid #00eeff;
 }
 
 .a15 {
-  border: 2px solid #fa0101;
+    border: 2px solid #fa0101;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
 }
 
 .content {
-  background-image: url(/images/background_t1.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-image: url(/images/background_t2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: end;
-      align-items: flex-end;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
-  max-width: 1100px;
-  height: 100vh;
-  margin: auto;
-  position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    max-width: 1100px;
+    height: 100vh;
+    margin: auto;
+    position: relative;
 }
 
+
 /*game*/
+
 .box {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column-reverse;
-      flex-direction: column-reverse;
-  position: absolute;
-  top: 380px;
-  left: 610px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 380px;
+    left: 610px;
 }
 
 #messages {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
-  color: #000;
-  padding: 1rem;
-  font-family: "Cabin Sketch", cursive;
-  font-size: 20px;
-  background-color: #fff;
-  width: 300px;
-  height: 100px;
-  border-radius: 25px;
-  box-shadow: 5px 5px 10px #000;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    color: #000;
+    padding: 1rem;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 20px;
+    background-color: #fff;
+    width: 300px;
+    height: 100px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #000;
 }
 
 #buttons div {
-  margin: 1rem 1rem;
+    margin: 1rem 1rem;
 }
 
 .x {
-  background-color: #2a312a;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 15px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 50%;
-  transition: 1ms linear all;
-  box-shadow: 5px 5px 10px #000;
+    background-color: #2a312a;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+    transition: 1ms linear all;
+    box-shadow: 5px 5px 10px #000;
 }
 
 .x:hover {
-  background-color: #3d507a;
-  box-shadow: 5px 5px 15px #000;
+    background-color: #3d507a;
+    box-shadow: 5px 5px 15px #000;
 }
 
 .x:active {
-  background-color: whitesmoke;
-  color: #02ff41;
+    background-color: whitesmoke;
+    color: #02ff41;
 }
 
+
 /*Results*/
+
 #game_panel {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  text-align: left;
-  line-height: 1.8;
-  color: #000;
-  padding: 1rem;
-  font-family: "Cabin Sketch", cursive;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 100%;
-  height: 100%;
-  color: #fff;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    line-height: 1.8;
+    color: #000;
+    padding: 1rem;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: 100%;
+    color: #fff;
 }
 
 #panel {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  text-align: left;
-  -ms-flex-pack: center;
-      justify-content: center;
-  position: absolute;
-  top: 255px;
-  left: 144px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 255px;
+    left: 144px;
 }
 
 .statistics {
-  width: 20px;
-  height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 #buttons {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  text-align: left;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: left;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
 }
 
 #results {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  -ms-flex-pack: space-evenly;
-      justify-content: space-evenly;
-  line-height: 1.8;
-  color: #000;
-  padding: 1rem;
-  font-family: "Cabin Sketch", cursive;
-  font-size: 20px;
-  background-color: rgba(0, 0, 0, 0.2);
-  width: 300px;
-  height: 100px;
-  color: #fff;
-  animation: fadeInUp 1s linear;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    line-height: 1.8;
+    color: #000;
+    padding: 1rem;
+    font-family: "Cabin Sketch", cursive;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 100px;
+    color: #fff;
+    animation: fadeInUp 1s linear;
 }
 
 .anim {
-  animation: fadeInUp 1s linear;
+    animation: fadeInUp 1s linear;
 }
 
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+    from {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 #results span {
-  color: #6d77ff;
+    color: #6d77ff;
 }
 
 .active {
-  background: teal;
-  color: #fff;
-  visibility: visible;
-  animation: fadeInUp 1s linear;
+    background: teal;
+    color: #fff;
+    visibility: visible;
+    animation: fadeInUp 1s linear;
 }
 
 .none {
-  visibility: hidden;
-  animation: fadeInUp 1s linear;
+    visibility: hidden;
+    animation: fadeInUp 1s linear;
 }
 
 .boxi {
-  background-color: #218D9B;
-  height: 100px;
-  width: 100px;
+    background-color: #218D9B;
+    height: 100px;
+    width: 100px;
 }
 
 .transform {
-  transition: all 2s ease;
+    transition: all 2s ease;
 }
 
 .transform-active {
-  background-color: #45CEE0;
-  height: 200px;
-  width: 200px;
+    background-color: #45CEE0;
+    height: 200px;
+    width: 200px;
 }
 
+
 /* on/off button */
+
 .toggle {
-  display: block;
-  text-align: center;
-  margin-top: 40px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .toggle--checkbox {
-  display: none;
+    display: none;
 }
 
 .toggle--btn {
-  display: block;
-  margin: 0 auto;
-  font-size: 1.4em;
-  transition: all 350ms ease-in;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.4em;
+    transition: all 350ms ease-in;
 }
 
 .toggle--btn:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
-.toggle--btn, .toggle--btn:before, .toggle--btn:after,
+.toggle--btn,
+.toggle--btn:before,
+.toggle--btn:after,
 .toggle--checkbox,
 .toggle--checkbox:before,
 .toggle--checkbox:after {
-  transition: all 250ms ease-in;
+    transition: all 250ms ease-in;
 }
 
-.toggle--btn:before, .toggle--btn:after,
+.toggle--btn:before,
+.toggle--btn:after,
 .toggle--checkbox:before,
 .toggle--checkbox:after {
-  content: '';
-  display: block;
+    content: '';
+    display: block;
 }
 
 .toggle--btn {
-  border: 5px solid #757373;
-  background-color: #db346c;
+    border: 5px solid #757373;
+    background-color: #db346c;
 }
 
 .toggle--btn:before {
-  background-color: #f2dd68;
-  border: 5px solid #e5ce5e;
+    background-color: #f2dd68;
+    border: 5px solid #e5ce5e;
 }
+
 
 /*Push button toggle*/
+
 .toggle--push .toggle--btn {
-  position: relative;
-  width: 50px;
-  height: 50px;
-  background-color: #dfdfdf;
-  border-radius: 50%;
-  box-shadow: 0 5px 10px 0px #5d5e5f, 0 15px 20px 0px #f7f7f7;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #dfdfdf;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px 0px #5d5e5f, 0 15px 20px 0px #f7f7f7;
 }
 
-.toggle--push .toggle--btn, .toggle--push .toggle--btn:before, .toggle--push .toggle--btn:after {
-  transition-duration: 150ms;
+.toggle--push .toggle--btn,
+.toggle--push .toggle--btn:before,
+.toggle--push .toggle--btn:after {
+    transition-duration: 150ms;
 }
 
 .toggle--push .toggle--btn:before {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background-color: #fff;
-  box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #dfdfdf;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:after {
-  position: absolute;
-  left: 50%;
-  top: 35%;
-  transform: translate(-50%, -50%);
-  width: 4px;
-  height: 12px;
-  background-color: #fff;
-  box-shadow: 0 0 0 2.5px #dfdfdf;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 12px;
+    background-color: #fff;
+    box-shadow: 0 0 0 2.5px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:hover:before {
-  box-shadow: inset 0 0 0 5px #b3b3b3, inset 0 0 0 14px #dfdfdf;
+    box-shadow: inset 0 0 0 5px #b3b3b3, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:hover:after {
-  background-color: #fff;
+    background-color: #fff;
 }
 
-.toggle--push .toggle--checkbox:checked + .toggle--btn {
-  box-shadow: 0 2px 5px 0px #aaabab, 0 15px 20px 0px transparent;
+.toggle--push .toggle--checkbox:checked+.toggle--btn {
+    box-shadow: 0 2px 5px 0px #aaabab, 0 15px 20px 0px transparent;
 }
 
-.toggle--push .toggle--checkbox:checked + .toggle--btn:before {
-  box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
+.toggle--push .toggle--checkbox:checked+.toggle--btn:before {
+    box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
 }
 
-.toggle--push .toggle--checkbox:checked + .toggle--btn:after {
-  background-color: #fff;
+.toggle--push .toggle--checkbox:checked+.toggle--btn:after {
+    background-color: #fff;
 }
 
 .toggle--push--glow {
-  background: rgba(255, 255, 255, 0);
-  padding: 0 0;
-  margin-bottom: 0px;
+    background: rgba(255, 255, 255, 0);
+    padding: 0 0;
+    margin-bottom: 0px;
 }
 
 .toggle--push--glow .toggle--btn {
-  background-color: #fff;
-  box-shadow: 0 5px 10px 0px #5d5e5f, 0 0 0 3px rgba(255, 255, 255, 0), 0 0 8px 2px transparent, 0 0 0 6px rgba(255, 255, 255, 0);
+    background-color: #fff;
+    box-shadow: 0 5px 10px 0px #5d5e5f, 0 0 0 3px rgba(255, 255, 255, 0), 0 0 8px 2px transparent, 0 0 0 6px rgba(255, 255, 255, 0);
 }
 
 .toggle--push--glow .toggle--btn:before {
-  box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #dfdfdf;
+    box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push--glow .toggle--btn:after {
-  background-color: #fff;
-  box-shadow: 0 0 0 2.5px #dfdfdf;
+    background-color: #fff;
+    box-shadow: 0 0 0 2.5px #dfdfdf;
 }
 
 .toggle--push--glow .toggle--btn:hover:before {
-  box-shadow: inset 0 0 0 5px #999999, inset 0 0 0 14px #dfdfdf;
+    box-shadow: inset 0 0 0 5px #999999, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push--glow .toggle--btn:hover:after {
-  background-color: #fff;
+    background-color: #fff;
 }
 
-.toggle--push--glow .toggle--checkbox:checked + .toggle--btn {
-  box-shadow: 0 0px 8px 0 #0072ad, 0 0 0 3px #0094e0, 0 0 30px 0 #0094e0, 0 0 0 6px rgba(255, 255, 255, 0);
+.toggle--push--glow .toggle--checkbox:checked+.toggle--btn {
+    box-shadow: 0 0px 8px 0 #0072ad, 0 0 0 3px #0094e0, 0 0 30px 0 #0094e0, 0 0 0 6px rgba(255, 255, 255, 0);
 }
 
-.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:before {
-  box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
+.toggle--push--glow .toggle--checkbox:checked+.toggle--btn:before {
+    box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
 }
 
-.toggle--push--glow .toggle--checkbox:checked + .toggle--btn:after {
-  background-color: #fff;
+.toggle--push--glow .toggle--checkbox:checked+.toggle--btn:after {
+    background-color: #fff;
 }
 
 .robo-nose {
-  width: 100%;
-  height: 100vh;
-  margin: auto;
-  position: relative;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+    position: relative;
 }
 
 .robo-nose div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
+
 /*# sourceMappingURL=style.css.map */
