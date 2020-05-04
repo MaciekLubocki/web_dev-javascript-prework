@@ -280,7 +280,7 @@ body {
   position: relative;
   width: 50px;
   height: 50px;
-  background-color: #f9f8f6;
+  background-color: #dfdfdf;
   border-radius: 50%;
   box-shadow: 0 5px 10px 0px #333, 0 15px 20px 0px #cccccc;
 }
@@ -297,8 +297,8 @@ body {
   width: 22.72727px;
   height: 22.72727px;
   border-radius: 50%;
-  background-color: #FF9900;
-  box-shadow: inset 0 0 0 5px #ccc, inset 0 0 0 14px #f9f8f6;
+  background-color: #0094e0;
+  box-shadow: inset 0 0 0 5px #aaa, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:after {
@@ -308,16 +308,16 @@ body {
   transform: translate(-50%, -50%);
   width: 4px;
   height: 12px;
-  background-color: #ccc;
-  box-shadow: 0 0 0 2.5px #f9f8f6;
+  background-color: #aaa;
+  box-shadow: 0 0 0 2.5px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:hover:before {
-  box-shadow: inset 0 0 0 5px #b3b3b3, inset 0 0 0 14px #f9f8f6;
+  box-shadow: inset 0 0 0 5px #919191, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push .toggle--btn:hover:after {
-  background-color: #b3b3b3;
+  background-color: #919191;
 }
 
 .toggle--push .toggle--checkbox:checked + .toggle--btn {
@@ -325,11 +325,11 @@ body {
 }
 
 .toggle--push .toggle--checkbox:checked + .toggle--btn:before {
-  box-shadow: inset 0 0 0 5px #FF9900, inset 0 0 0 14px #f9f8f6;
+  box-shadow: inset 0 0 0 5px #0094e0, inset 0 0 0 14px #dfdfdf;
 }
 
 .toggle--push .toggle--checkbox:checked + .toggle--btn:after {
-  background-color: #FF9900;
+  background-color: #0094e0;
 }
 
 .toggle--push--glow {

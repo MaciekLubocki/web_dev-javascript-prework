@@ -19,6 +19,11 @@ $toggleInactiveColor: #aaa;
 $toggleActiveColor: #FF9900;
 $toggleInactiveColor: #ccc;
 $bgColor--sad: #db346c;
+$toggleBtnRadius: 50px;
+$toggleBtnColor: #f9f8f6;
+$toggleShadowColor: #333;
+$toggleActiveColor: #FF9900;
+$toggleInactiveColor: #ccc;
 
 /*outside circle*/
 
@@ -32,6 +37,10 @@ $emojiColor: #1c0874;
 $emojiColorAlt: #3c2bd8;
 $toggleBtnColor: #dfdfdf;
 $toggleActiveColor: #0094e0;
+// $toggleBgColor: #111;
+$toggleBtnColor: #dfdfdf;
+$toggleActiveColor: #0094e0;
+$toggleInactiveColor: #aaa;
 
 /*general*/
 
@@ -313,11 +322,6 @@ body {
    Push button toggle
    ====================================================== */
 
-$toggleBtnRadius: 50px;
-$toggleBtnColor: #f9f8f6;
-$toggleShadowColor: #333;
-$toggleActiveColor: #FF9900;
-$toggleInactiveColor: #ccc;
 .toggle--push {
     & .toggle--btn {
         position: relative;
@@ -376,10 +380,6 @@ $toggleInactiveColor: #ccc;
     }
 }
 
-// $toggleBgColor: #111;
-$toggleBtnColor: #dfdfdf;
-$toggleActiveColor: #0094e0;
-$toggleInactiveColor: #aaa;
 .toggle--push--glow {
     background: $toggleBgColor;
     padding: 50px 0;
