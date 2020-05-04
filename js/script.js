@@ -102,7 +102,7 @@ buttonClick.addEventListener('click', function() {
     count += 1;
 
     clearResults();
-    // printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
+    printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
 });
 
 
@@ -168,3 +168,15 @@ document.querySelector('#results').addEventListener('click', function() {
 //     typeWriter();
 
 // });
+
+var i = 0;
+var txt = document.getElementById("messages").innerText;
+var speed = 50;
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("messages p").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
