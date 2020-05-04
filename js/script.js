@@ -149,3 +149,24 @@ document.querySelector('#results').addEventListener('click', function() {
     document.querySelector('#panel').classList.toggle('none');
 
 });
+
+
+var i = 0;
+var txt = printMessage;
+var speed = 50;
+
+function typeWriter() {
+    if (i < txt.length) {
+        document.getElementById("messages").innerHTML += txt.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+
+
+
+document.querySelector('#results').addEventListener('click', function() {
+    // alert('TEST1');
+    typeWriter();
+
+});
