@@ -102,7 +102,7 @@ buttonClick.addEventListener('click', function() {
     count += 1;
 
     clearResults();
-    printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
+    // printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
 });
 
 
@@ -151,22 +151,20 @@ document.querySelector('#results').addEventListener('click', function() {
 });
 
 
-var i = 0;
-var txt = printMessage;
-var speed = 50;
+// var i = 0;
+// var txt = document.getElementById("messages").innerText;
+// var speed = 50;
 
-function typeWriter() {
-    if (i < txt.length) {
-        document.getElementById("messages").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
-}
+// function typeWriter() {
+//     if (i < txt.length) {
+//         document.getElementById("messages").innerHTML += txt.charAt(i);
+//         i++;
+//         setTimeout(typeWriter, speed);
+//     }
+// }
 
+// document.querySelector('#results').addEventListener('click', function() {
+//     // alert('TEST1');
+//     typeWriter();
 
-
-document.querySelector('#results').addEventListener('click', function() {
-    // alert('TEST1');
-    typeWriter();
-
-});
+// });

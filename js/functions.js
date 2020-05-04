@@ -1,7 +1,7 @@
 function printMessage(msg) {
     var div = document.createElement('div');
     div.innerHTML = msg;
-    document.querySelector('#messages').appendChild(div);
+    document.querySelector('p').appendChild(div);
 
 }
 
