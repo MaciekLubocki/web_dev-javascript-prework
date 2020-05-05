@@ -1,8 +1,8 @@
 /*Game module */
 
 
-var countComputer = 0;
-var countPlayer = 0;
+let countComputer = 0;
+let countPlayer = 0;
 
 
 printMessage('Paper-Stone-Scissors is simple but yet funny game to play. Win with the MakuBot');
@@ -71,7 +71,7 @@ function playGame(playerInput) {
 
     }
 
-    result = displayResult(argComputerMove, argPlayerMove);
+    const result = displayResult(argComputerMove, argPlayerMove);
     printMessage('I have chosen ' + argComputerMove + ', and you got ' + argPlayerMove + '. ' + result);
 
 }
@@ -169,14 +169,29 @@ document.querySelector('#results').addEventListener('click', function() {
 
 // });
 
-var i = 0;
-var txt = document.getElementById("messages").innerText;
-var speed = 50;
+// var i = 0;
+// var txt = document.getElementById("messages").innerText;
+// var speed = 50;
 
-function typeWriter() {
-    if (i < txt.length) {
-        document.getElementById("messages p").innerHTML += txt.charAt(i);
-        i++;
-        setTimeout(typeWriter, speed);
-    }
+// function typeWriter() {
+//     if (i < txt.length) {
+//         document.getElementById("messages p").innerHTML += txt.charAt(i);
+//         i++;
+//         setTimeout(typeWriter, speed);
+//     }
+// }
+
+
+let msg = result;
+let speed = 50;
+let i = 0;
+const textElem = document.getElementById("messages");
+
+function typing(i) {
+    textElem.innerHTML = textElem.innerHTML + msg.charAt(i++);
+    if (i <= msg.length) setTimeout(function() { typing(i); }, speed);
 }
+
+document.querySelector('#results').addEventListener('click', function() {
+    typing(i);
+});
