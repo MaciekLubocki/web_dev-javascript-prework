@@ -1,4 +1,4 @@
-/*Game module */
+﻿/*Game module */
 
 
 let countComputer = 0;
@@ -71,8 +71,17 @@ function playGame(playerInput) {
 
     }
 
+
     const result = displayResult(argComputerMove, argPlayerMove);
-    printMessage('I have chosen ' + argComputerMove + ', and you got ' + argPlayerMove + '. ' + result);
+
+
+    typing('I have chosen ' + argComputerMove + ', and you got ' + argPlayerMove + '. ' + result);
+
+
+
+    document.querySelector('.play-stone').addEventListener('click', function() {
+
+    });
 
 }
 
@@ -94,8 +103,6 @@ document.querySelector('.play-scissors').addEventListener('click', function() {
 /* Results Module */
 
 
-
-
 var buttonClick = document.querySelector("#buttons");
 var count = 0;
 buttonClick.addEventListener('click', function() {
@@ -108,15 +115,7 @@ buttonClick.addEventListener('click', function() {
 
 
 
-// document.querySelector('#panel').addEventListener('click', function() {
-
-//     document.querySelector('#results').classList.toggle('none');
-// });
-
-
 document.querySelector('#toggle--push--glow').addEventListener('click', function() {
-    // alert('TEST1');
-    // document.querySelector('.box').classList.remove('none');
 
 
     document.querySelector('.box').classList.toggle('none');
@@ -142,7 +141,6 @@ document.querySelector('.statistics').addEventListener('click', function() {
 
 
 document.querySelector('#results').addEventListener('click', function() {
-    // alert('TEST1');
     document.querySelector('#results').classList.toggle('none');
     document.querySelector('#results').classList.toggle('anim');
     document.querySelector('#panel').classList.toggle('anim_out');
@@ -151,47 +149,29 @@ document.querySelector('#results').addEventListener('click', function() {
 });
 
 
-// var i = 0;
-// var txt = document.getElementById("messages").innerText;
-// var speed = 50;
+function typing(text) {
+    const textElem = document.getElementById("messages");
+    const speed = 40;
 
-// function typeWriter() {
-//     if (i < txt.length) {
-//         document.getElementById("messages").innerHTML += txt.charAt(i);
-//         i++;
-//         setTimeout(typeWriter, speed);
-//     }
-// }
-
-// document.querySelector('#results').addEventListener('click', function() {
-//     // alert('TEST1');
-//     typeWriter();
-
-// });
-
-// var i = 0;
-// var txt = document.getElementById("messages").innerText;
-// var speed = 50;
-
-// function typeWriter() {
-//     if (i < txt.length) {
-//         document.getElementById("messages p").innerHTML += txt.charAt(i);
-//         i++;
-//         setTimeout(typeWriter, speed);
-//     }
-// }
-
-
-let msg = result;
-let speed = 50;
-let i = 0;
-const textElem = document.getElementById("messages");
-
-function typing(i) {
-    textElem.innerHTML = textElem.innerHTML + msg.charAt(i++);
-    if (i <= msg.length) setTimeout(function() { typing(i); }, speed);
+    for (let i = 0; i <= text.length; i++) {
+        setTimeout(function() {
+            textElem.innerHTML = textElem.innerHTML + text.charAt(i++);
+        }, speed);
+    }
 }
 
-document.querySelector('#results').addEventListener('click', function() {
-    typing(i);
-});
+
+/* typing effect module */
+
+
+
+function typing(text) {
+    const textElem = document.getElementById("messages");
+    const speed = 40;
+
+    for (let i = 0; i <= text.length; i++) {
+        setTimeout(function() {
+            textElem.innerHTML = textElem.innerHTML + text.charAt(i++);
+        }, speed);
+    }
+}
