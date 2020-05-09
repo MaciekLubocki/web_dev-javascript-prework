@@ -1,11 +1,14 @@
 ﻿/*Game module */
 
+
+
 {
     let countComputer = 0,
         countPlayer = 0;
 
 
-    printMessage('Paper-Stone-Scissors is simple but yet funny game to play. Win with the MakuBot');
+    typing('Hello my name is MakuBot. I want to play with you Paper-Stone-Scissors! Lets have a try');
+
     printResults('ここに統計があります。ゲームを始めましょう。');
 
     function playGame(playerInput) {
@@ -95,16 +98,34 @@
     buttonClick.addEventListener('click', function() {
         count += 1;
         clearResults();
+        clearResults_top_Maku();
+        clearResults_top_You();
         printResults('MakuBot:' + countComputer + "<br/>You:" + countPlayer + "<br/>Sessions held:" + '<span>' + count + '<span>');
+        printResults_top_Maku('MakuBot:' + countComputer);
+
+        printResults_top_You("You:" + countPlayer);
+
     });
 
 
+
+
+
+
+
     document.querySelector('#toggle--push--glow').addEventListener('click', function() {
+
+        clearMessages();
         document.querySelector('.box').classList.toggle('none');
+        clearMessages();
         document.querySelector('.box').classList.add('anim');
+        clearMessages();
         document.querySelector('.box').classList.toggle('anim_out');
+        clearMessages();
         document.querySelector('.beep').classList.toggle('anim_beep');
+        clearMessages();
         document.querySelector('.beep').classList.toggle('none');
+        clearMessages();
     });
 
 
@@ -126,17 +147,14 @@
 
     /* typing effect module */
 
-
-
     function typing(text) {
         const textElem = document.getElementById("messages");
         const speed = 40;
 
-        for (let i = 0; i <= text.length; i++) {
+        for (let i = 0; i < text.length; i++) {
             setTimeout(function() {
-                textElem.innerHTML = textElem.innerHTML + text.charAt(i++);
-            }, speed);
+                textElem.innerHTML += text[i];
+            }, i * speed);
         }
     }
-
 }
